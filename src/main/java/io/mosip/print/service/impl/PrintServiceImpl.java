@@ -335,7 +335,8 @@ public class PrintServiceImpl implements PrintService{
 			persoRequestDto.setDateOfBirth(decryptedJson.get("dateOfBirth") !=null ? decryptedJson.get("dateOfBirth").toString() : null);
 			persoRequestDto.setExternalRequestId(requestId);
 			printLogger.info("NIN from decrypted String " + decryptedJson.get("NIN") != null ? decryptedJson.get("NIN").toString() : null);
-			persoRequestDto.setCardNumber(decryptedJson.get("NIN") != null ? decryptedJson.get("NIN").toString() : null);			
+			persoRequestDto.setCardNumber(decryptedJson.get("NIN") != null ? decryptedJson.get("NIN").toString() : null);
+			persoRequestDto.setNin(decryptedJson.get("NIN") != null ? decryptedJson.get("NIN").toString() : null);
 			PersoBiometricsDto persoBiometricsDto=new PersoBiometricsDto();
 			String faceCbeff = decryptedJson.get("Face") != null ? decryptedJson.get("Face").toString() : null;
 			persoBiometricsDto.setFaceImagePortrait(getBiometrics(faceCbeff, "FACE", null));
