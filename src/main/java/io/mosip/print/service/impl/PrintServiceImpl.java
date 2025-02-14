@@ -352,6 +352,7 @@ public class PrintServiceImpl implements PrintService{
 					FingerPrintDto fingerPrintDto=new FingerPrintDto();
 					fingerPrintDto.setIndex(1);
 					byte[] fingerbyte=getBiometrics(fingerPrint, "Finger",fingersIndex);
+					 printLogger.info("fingerbyte " + fingerbyte.toString());
 					if(fingerbyte!=null) {
 						String fingerprintImage=BiometricExtractionUtil.convertFingerIsoToImage(fingerbyte);
 						printLogger.info("Primary fingerprintImage"+fingerprintImage);
@@ -368,6 +369,7 @@ public class PrintServiceImpl implements PrintService{
 					FingerPrintDto fingerPrintDto=new FingerPrintDto();
 					fingerPrintDto.setIndex(8);
 					byte[] fingerbyte=getBiometrics(fingerPrint, "Finger",fingersIndex);
+					 printLogger.info("fingerbyte " + fingerbyte.toString());
 					if(fingerbyte!=null) {
 						String fingerprintImage=BiometricExtractionUtil.convertFingerIsoToImage(fingerbyte);
 						printLogger.info("Secondary fingerprintImage"+fingerprintImage);
